@@ -1,13 +1,13 @@
 # MIRA — Medical Intelligence Robotic Automation
 
-> A health prediction platform combining Python Flask, SQLite, and Claude AI to manage patient blood test records with AI-generated clinical risk assessments.
+> A health prediction platform combining Python Flask, SQLite, and OPENAI to manage patient blood test records with AI-generated clinical risk assessments.
 
 ---
 
 ## ✨ Features
 
 - **Full CRUD** — Create, Read, Update, Delete patient records
-- **AI Health Assessment** — Claude AI analyses Glucose, Haemoglobin, and Cholesterol values and generates a structured clinical risk summary
+- **AI Health Assessment** —  analyses Glucose, Haemoglobin, and Cholesterol values and generates a structured clinical risk summary
 - **Real-time Search** — Filter patients by name or email
 - **Dashboard** — Live aggregated stats across all patients
 - **Data Validation** — Client + server-side validation (email format, DOB constraints, numeric blood values)
@@ -37,9 +37,7 @@ mira/
 
 ## 🚀 Quick Start
 
-### Prerequisites
-- Python 3.9+
-- An [Anthropic API key](https://console.anthropic.com/) (for Claude AI predictions)
+
 
 ### Setup & Run
 
@@ -119,7 +117,7 @@ Patient blood values are sent to **Claude claude-sonnet-4-20250514** via the Ant
 ### Why this stack?
 - **Flask** — lightweight, perfect for REST APIs, minimal boilerplate
 - **SQLite** — zero-config persistent storage, ideal for demo/prototype scale
-- **Claude AI** — state-of-the-art LLM with excellent clinical reasoning; the structured prompt returns consistent, parseable output
+- **OPEN AI** — state-of-the-art LLM with excellent clinical reasoning; the structured prompt returns consistent, parseable output
 - **Vanilla JS** — no build toolchain needed; keeps the project accessible and fast to run
 
 ---
@@ -137,7 +135,7 @@ Patient blood values are sent to **Claude claude-sonnet-4-20250514** via the Ant
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `ANTHROPIC_API_KEY` | *(none)* | **Required** for AI predictions |
+| 'OPENAI_API_KEY` | *(none)* | **Required** for AI predictions |
 | `FLASK_DEBUG` | `True` | Set `False` for production |
 
 > **Security**: Never commit your API key. Use environment variables or a `.env` file (which is gitignored).
