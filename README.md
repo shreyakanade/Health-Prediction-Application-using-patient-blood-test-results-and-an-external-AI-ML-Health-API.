@@ -47,7 +47,7 @@ git clone https://github.com/YOUR_USERNAME/mira-health.git
 cd mira-health
 
 # 2. Set your API key (never hardcode this)
-export ANTHROPIC_API_KEY=sk-ant-...
+export OPENAI_API_KEY=sk-ant-...
 
 # 3. Start MIRA
 chmod +x start.sh
@@ -83,7 +83,7 @@ python app.py
 
 ## 🤖 AI Integration
 
-Patient blood values are sent to **Claude claude-sonnet-4-20250514** via the Anthropic Messages API. The prompt instructs Claude to act as a clinical decision-support system and return a structured response with:
+
 
 1. **Risk Level** (Low / Moderate / High)
 2. **Key Findings** (notable blood value deviations)
